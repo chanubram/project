@@ -1,23 +1,30 @@
 version: 0.2
-        
+
 phases:
   install:
     on-failure: ABORT 
     commands:
-      - echo 'installing softwares in to the enviroment'
-
+      - echo 'installing software into the environment'
     finally:
       - echo 'installation completed'
+
   pre_build:
     on-failure: ABORT 
     commands:
-      - echo 'begin pre build step'
- 
+      - echo 'begin pre-build step'
+
   build:
     on-failure: ABORT 
     commands:
-      - echo 'begin  build step'
+      - echo 'begin build step'
+      - |
+        IFS=',' read -ra VALUES <<< "$servicename"
+        for value in "${VALUES[@]}"; do
+          echo "Processing value: $value"
+          # Use the value in your commands or scripts
+        done
+
   post_build:
     on-failure: ABORT 
     commands:
-      - echo 'begin post build step'
+      - echo 'begin post-build step'
