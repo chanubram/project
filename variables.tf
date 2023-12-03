@@ -1,0 +1,17 @@
+variable "aws_region" {}
+variable "env" {}
+variable "hostname_prefix" {}
+variable "vpc_cidr" {}
+variable "vpc_type" {}
+variable "subnet_cidr_web" {}
+variable "subnet_cidr_APP" {}
+variable "subnet_cidr_DB" {}
+variable "type" {}
+variable "product" {}
+variable "transit_gateway_id" {}
+variable "share_account_id" {}
+variable "inbound_ports_infra" {}
+variable "inbound_ports_web" {}
+variable "inbound_ports_LAN" {}
+variable "fw_gateway_ip_address" {}
+variable "bgp_asn" {}
